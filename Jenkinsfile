@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Checkout the code from the repository
                 script {
-                    git 'https://github.com/akashgaikwad0209/akash.git'
+                    bat 'echo "Testing"'
                 }
             }
         }
@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your application (replace this with your build commands)
-                sh 'echo "Testing"'
+                bat 'echo "Testing"'
             }
         }
 
