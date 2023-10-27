@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your application (replace this with your build commands)
-                bat 'echo "Testing"'
+                bat 'maven clean install'
             }
         }
 
