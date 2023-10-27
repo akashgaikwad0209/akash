@@ -2,15 +2,6 @@ pipeline {
     agent any  // This runs the pipeline on any available agent (node/agent)
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from the repository
-                script {
-                    bat 'echo "Testing"'
-                }
-            }
-        }
-
         stage('Build') {
             steps {
                 // Build your application (replace this with your build commands)
