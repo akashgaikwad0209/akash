@@ -12,7 +12,7 @@ pipeline {
     stage('Runiing test stage parallel') {
 
         parallel {
-        stage('Test') {
+        stage('Test1') {
             steps {
                 // Run tests (replace this with your test commands)
                 sh 'echo "Testing"'
