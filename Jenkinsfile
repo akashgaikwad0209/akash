@@ -9,12 +9,25 @@ pipeline {
             }
         }
 
+    stage('Runiing test stage parallel') {
+
+        parallel {
         stage('Test') {
             steps {
                 // Run tests (replace this with your test commands)
                 sh 'echo "Testing"'
             }
         }
+
+                stage('Test') {
+            steps {
+                // Run tests (replace this with your test commands)
+                sh 'echo "Testing"'
+            }
+        }
+        }
+    }
+
 
         stage('Deploy') {
             steps {
