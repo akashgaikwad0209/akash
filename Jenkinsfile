@@ -15,14 +15,18 @@ pipeline {
         stage('Test1') {
             steps {
                 // Run tests (replace this with your test commands)
-                sh 'echo "Testing"'
+                println env.GIT_BRANCH
+                bat 'echo "env.GIT_BRANCH"'
+                sleep 60
             }
         }
 
                 stage('Test') {
             steps {
                 // Run tests (replace this with your test commands)
-                sh 'echo "Testing"'
+                println env.GIT_BRANCH
+                bat 'echo "env.GIT_BRANCH"'
+                sleep 60
             }
         }
         }
