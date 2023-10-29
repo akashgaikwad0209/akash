@@ -26,6 +26,8 @@ pipeline {
                 expression { params.UPLOAD_ARTIFACT }
             }
             steps {
+
+                if ( ${env.BRANCH_NAME}.startswith("feature") ) {
                 // Build your application (replace this with your build commands)
                // def workspaceDir = env.WORKSPACE
                 echo "${env.WORKSPACE}"
@@ -36,7 +38,11 @@ pipeline {
                 echo "${env.BRANCH_NAME}"
                 echo "${artifacturl}"
                 curl -H "${artifactausername}:${artifactapitoken}" -O -L "${artifacturl}/${artifactname}" -T "${artifactname}"
-                """           
+                """    
+                }
+                else {
+                    echo "Not a fearure branch"
+                }       
             }
         }
 
