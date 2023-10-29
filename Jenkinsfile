@@ -1,4 +1,8 @@
-def artifacturl="https://anshika1.jfrog.io/artifactory/libs-snapshot/Project-1.0.1/my-app-1.0-SNAPSHOT.jar"
+def artifacturl="https://anshika1.jfrog.io/artifactory/libs-snapshot/Project-1.0.1"
+def artifactapitoken="AKCp8pRa4f1D5jB952CH7vSPCNWGPYThdfieG6YxMdogBdTuXxMAPDXgvrtwrw5wP5YwUuvXz"
+def artifactausername="X-Jfrog-Art-Api"
+def artifactname="my-app-1.0-SNAPSHOT.jar"
+
 pipeline {
     agent any  // This runs the pipeline on any available agent (node/agent)
 
@@ -20,7 +24,7 @@ pipeline {
                 bat """
                 cd ${env.WORKSPACE}/target
                 echo "${artifacturl}"
-                curl -H "X-Jfrog-Art-Api:AKCp8pRa4f1D5jB952CH7vSPCNWGPYThdfieG6YxMdogBdTuXxMAPDXgvrtwrw5wP5YwUuvXz" -O -L "${artifacturl}" -T "my-app-1.0-SNAPSHOT.jar"
+                curl -H "${artifactausername}:${artifactapitoken}" -O -L "${artifacturl}/${artifactname}" -T "${artifactname}"
                 """           
             }
         }
