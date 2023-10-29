@@ -1,5 +1,3 @@
-
-def workspaceDir = env.WORKSPACE
 pipeline {
     agent any  // This runs the pipeline on any available agent (node/agent)
 
