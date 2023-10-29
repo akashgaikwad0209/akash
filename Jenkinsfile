@@ -26,7 +26,7 @@ pipeline {
                 expression { params.UPLOAD_ARTIFACT }
             }
             steps {
-
+                script {
                 if ( ${env.BRANCH_NAME}.startswith("feature") ) {
                 // Build your application (replace this with your build commands)
                // def workspaceDir = env.WORKSPACE
@@ -42,7 +42,8 @@ pipeline {
                 }
                 else {
                     echo "Not a fearure branch"
-                }       
+                }
+                }    
             }
         }
 
