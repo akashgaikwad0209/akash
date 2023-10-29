@@ -1,4 +1,4 @@
-def artifacturl=https://anshika1.jfrog.io/artifactory/libs-snapshot/Project-1.0.1/my-app-1.0-SNAPSHOT.jar
+def artifacturl="https://anshika1.jfrog.io/artifactory/libs-snapshot/Project-1.0.1/my-app-1.0-SNAPSHOT.jar"
 pipeline {
     agent any  // This runs the pipeline on any available agent (node/agent)
 
