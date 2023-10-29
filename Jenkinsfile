@@ -76,11 +76,11 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline succeeded! Deploying to production...'
+            echo 'Pipeline succeeded!'
             // Add deployment to production steps here
         }
         failure {
-            echo 'Pipeline failed! Not deploying to production.'
+            echo 'Pipeline failed! '
         }
     }
 }
