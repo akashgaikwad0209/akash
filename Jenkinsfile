@@ -1,5 +1,5 @@
 pipeline {
-    agent any  // This runs the pipeline on any available agent (node/agent)
+    agent test  // This runs the pipeline on any available agent (node/agent)
 
     stages {
         stage('Build') {
