@@ -33,6 +33,7 @@ pipeline {
                // bat 'curl -H "X-Jfrog-Art-Api:AKCp8pRa4f1D5jB952CH7vSPCNWGPYThdfieG6YxMdogBdTuXxMAPDXgvrtwrw5wP5YwUuvXz" -O -L "https://anshika1.jfrog.io/artifactory/libs-snapshot/Project-1.0.1/my-app-1.0-SNAPSHOT.jar" -T "my-app-1.0-SNAPSHOT.jar"'
                 bat """
                 cd ${env.WORKSPACE}/target
+                echo "${env.BRANCH_NAME}"
                 echo "${artifacturl}"
                 curl -H "${artifactausername}:${artifactapitoken}" -O -L "${artifacturl}/${artifactname}" -T "${artifactname}"
                 """           
