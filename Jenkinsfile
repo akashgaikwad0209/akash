@@ -14,11 +14,11 @@ pipeline {
     stages {
 
 
-    stage('Checkout') {
-            steps {
-                bat 'git clone https://github.com/akashgaikwad0209/akash.git'
-            }
-        }
+       /* stage('Checkout') {
+                steps {
+                    bat 'git clone https://github.com/akashgaikwad0209/akash.git'
+                }
+            } */
 
 
 
