@@ -46,7 +46,7 @@ pipeline {
                 cd ${env.WORKSPACE}/target
                 echo "${env.BRANCH_NAME}"
                 echo "${artifacturl}"
-                curl -H "${artifactausername}:${artifactapitoken}" -O -L "${artifacturl}/${artifactname}" -T "${artifactname}"
+                #curl -H "${artifactausername}:${artifactapitoken}" -O -L "${artifacturl}/${artifactname}" -T "${artifactname}"
                 """    
                 }    
             }
